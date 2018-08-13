@@ -14,7 +14,7 @@ int main()
 {
     SocketMatTransmissionClient socketMat;  //声明类
 //	if(socketMat.socketConnect("10.0.0.6",6666)<0){
-// 	return 0;
+// 		return 0;
 //	}
 
     VideoCapture capture; 
@@ -28,7 +28,6 @@ int main()
 //    kernel = getStructuringElement(MORPH_RECT, Size(5, 5));
 
     namedWindow("input", CV_WINDOW_AUTOSIZE);//设立窗口
-//    namedWindow("output", CV_WINDOW_AUTOSIZE);
     std::vector<std::vector<Point> > contours;
     std::vector<Vec4i> hireachy;
 	Size size(IMG_WIDTH,IMG_HEIGHT);
@@ -59,16 +58,13 @@ int main()
             }
         }
 		
-        //矩形框
-//		if(40*rect.x*rect.y>=frame.cols*frame.rows){
-//        	rectangle(frame,rect, Scalar(0,255,0),2);
-//        }
-		//圆形框
-//		if(40*radius*radius*3.1415>=frame.cols*frame.rows)
        	circle(frame, Point(center.x,center.y), (int)radius, Scalar(0,255,0), 2);//画圆
     	direction(center);
 		imshow("input", frame);//显示图像
         waitKey(30);
+
+
+		if
 //		socketMat.transmit(frame);//编码并传输图像
 
     }
